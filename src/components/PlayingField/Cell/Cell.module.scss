@@ -1,0 +1,25 @@
+.cell {
+  color: blue;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+  background-color: #f7ee7d;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  line-height: 3.9rem;
+  font-size: 6em;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: bottom;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 5px 5px 5px 1px #75702c;;
+  }
+}
+.x {
+  color: rgb(207, 112, 112);
+}
+.o {
+  color: rgb(98, 98, 226);
+}
