@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import PlayingField from './components/PlayingField/PlayingField'
 import Score from './components/Score/Score'

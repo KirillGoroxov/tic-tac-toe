@@ -25,3 +25,23 @@
     transform: scale(1.1);
   }
 }
+.history {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #ff5f5f;
+  margin: 50px auto 0;
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+  padding-left: 2px;
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

@@ -33,6 +33,7 @@ const Cell = (props) => {
       props.setDataField(copyDataField)
       // проверяем условие победы с помощью специальной функции
       checkWinner(copyDataField)
+      console.log(localStorage)
     }
   }
   // Функция, проверяющая условие победы
@@ -44,9 +45,15 @@ const Cell = (props) => {
         // меняем значение победы, чтобы игроки не смогли играть после нее
         data.setWin(true)
         // Прибавляем очки крестику
-        if (board[x] === 'x') data.setCross(data.cross + 1)
+        if (board[x] === 'x') {
+          data.setCross(data.cross + 1)
+          localStorage.setItem('x', data.cross)
+        }
         // Прибавляем очки нолику
-        if (board[x] === 'o') data.setCircle(data.circle + 1)
+        if (board[x] === 'o') {
+          data.setCircle(data.circle + 1)
+          localStorage.setItem('o', data.circle)
+        }
         return 'win'
       }
     }

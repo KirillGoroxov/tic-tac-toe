@@ -15,6 +15,14 @@ const PlayingField = () => {
     setDataField(copyDataField)
     data.setWin(false)
   }
+  // функция для удаления истории игр
+  const clearHistory = () => {
+    localStorage.removeItem('x')
+    localStorage.removeItem('o')
+    setDataField(Array(9).fill(null))
+    data.setCross(0)
+    data.setCircle(0)
+  }
   return (
     <div>
       <div className={c.wrapperPlayingField}>
@@ -27,6 +35,7 @@ const PlayingField = () => {
             id={id} />)}
       </div>
       <button className={c.reset} onClick={clearField}>RESET</button>
+      <button className={c.history} onClick={clearHistory}>Clear history</button>
     </div>
   )
 }
