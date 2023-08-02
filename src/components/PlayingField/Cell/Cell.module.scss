@@ -1,9 +1,8 @@
 .cell {
-  color: blue;
   width: 5rem;
   height: 5rem;
   border-radius: 15px;
-  background-color: #f7ee7d;
+  background-color: #404c79;
   margin: 10px;
   cursor: pointer;
   transition: 0.3s;
@@ -14,12 +13,9 @@
   vertical-align: bottom;
   transition: box-shadow 0.3s;
   &:hover {
-    box-shadow: 5px 5px 5px 1px #75702c;;
+    box-shadow: 2px 2px 2px 1px #6776ff;
   }
 }
 .x {
-  color: rgb(207, 112, 112);
-}
-.o {
-  color: rgb(98, 98, 226);
+  color: rgb(137, 100, 196);
 }
