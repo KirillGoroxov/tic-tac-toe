@@ -2,9 +2,8 @@ import React, { useContext } from "react";
 import c from "./Cell.module.scss";
 import { dataContext } from "../../../Context";
 
-const Cell = (props) => {
+const Cell = ({ value, dataField, setDataField, id }) => {
   const data = useContext(dataContext);
-  const value = props.value;
   // комбинации для победы
   const winCondition = [
     [0, 1, 2],
@@ -26,11 +25,11 @@ const Cell = (props) => {
       // получаем id клетки, по которой был совершен клик
       const id = e.target.id;
       // создаем копию массива с информацией об игровом поле
-      const copyDataField = [...props.dataField];
+      const copyDataField = [...dataField];
       // меняем значение в массиве по id
       copyDataField[id] = whoseMove === "cross" ? "x" : "o";
       // меняем стейт с помощью созданной ранее копии
-      props.setDataField(copyDataField);
+      setDataField(copyDataField);
       // проверяем условие победы с помощью специальной функции
       checkWinner(copyDataField);
     }
@@ -59,7 +58,7 @@ const Cell = (props) => {
   };
   return (
     <div
-      id={props.id}
+      id={id}
       className={c.cell}
       style={{
         color: value === "x" ? "rgb(108, 160, 180)" : "rgb(137, 100, 196)",
